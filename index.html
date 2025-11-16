@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Rain Drop Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Math Rain Drop</h1>
+            <div class="stats">
+                <div class="stat">
+                    <span class="label">Score:</span>
+                    <span id="score" class="value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Lives:</span>
+                    <span id="lives" class="value">3</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Level:</span>
+                    <span id="level" class="value">1</span>
+                </div>
+            </div>
+        </header>
+
+        <div id="game-area">
+            <div id="raindrops"></div>
+        </div>
+
+        <div class="controls">
+            <input type="number" id="answer-input" placeholder="Enter your answer" disabled>
+            <button id="submit-btn" disabled>Submit</button>
+        </div>
+
+        <div class="menu">
+            <button id="start-btn">Start Game</button>
+            <div class="difficulty">
+                <label for="difficulty-select">Difficulty:</label>
+                <select id="difficulty-select">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="game-over" class="hidden">
+            <h2>Game Over!</h2>
+            <p>Your final score: <span id="final-score">0</span></p>
+            <button id="restart-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
